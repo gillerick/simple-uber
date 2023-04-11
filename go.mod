@@ -3,29 +3,28 @@ module simple-uber
 go 1.20
 
 require (
+	github.com/bww/go-postgis v1.0.4
 	github.com/gorilla/mux v1.8.0
-	github.com/lib/pq v1.10.2
+	github.com/jackc/pgtype v1.11.0
+	github.com/lib/pq v1.10.6
 	github.com/prometheus/common v0.2.0
 	github.com/segmentio/kafka-go v0.4.39
 	gopkg.in/yaml.v2 v2.4.0
 	gorm.io/driver/postgres v1.3.7
 	gorm.io/gorm v1.24.0
-	github.com/lib/pq v1.10.6
-	github.com/bww/go-postgis v1.0.4
-
 
 )
 
 require (
 	github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc // indirect
 	github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf // indirect
+	github.com/gofrs/uuid v4.0.0+incompatible // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.12.1 // indirect
 	github.com/jackc/pgio v1.0.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgproto3/v2 v2.3.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b // indirect
-	github.com/jackc/pgtype v1.11.0 // indirect
 	github.com/jackc/pgx/v4 v4.16.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.4 // indirect

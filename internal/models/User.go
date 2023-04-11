@@ -1,14 +1,16 @@
 package models
 
 import (
-	"github.com/bww/go-postgis"
+	uuid "github.com/jackc/pgtype/ext/gofrs-uuid"
 	"time"
 )
 
-type Location struct {
-	LocationId  uint64
-	Coordinates postgis.PointS
-	Address     string
+type User struct {
+	UserId      uuid.UUID
+	Name        string
+	Email       string
+	PhoneNumber string
+	AuthToken   string
 	CreatedAt   time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"created_at"`
 	UpdatedAt   time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
 }
