@@ -2,7 +2,9 @@ package http
 
 import (
 	"fmt"
+	"github.com/prometheus/common/log"
 	"net/http"
+	"simple-uber/internal/configs"
 	"time"
 
 	"github.com/gorilla/mux"
@@ -19,10 +21,11 @@ func (s *Server) Run() error {
 }
 
 // ToDo: Inject config properties and handlers
-func NewServer() *Server {
+func NewServer(config configs.App) *Server {
+	log.Infof("server listening on address: %s, port: %s", config.Host, config.Port)
 
 	r := mux.NewRouter()
-	addr := fmt.Sprintf("%s:%s")
+	addr := fmt.Sprintf("%s:%s", config.Host, config.Port)
 	srv := &http.Server{
 		Handler:      r,
 		Addr:         addr,
