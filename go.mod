@@ -11,7 +11,8 @@ require (
 	gorm.io/driver/postgres v1.3.7
 	gorm.io/gorm v1.24.0
 	github.com/lib/pq v1.10.6
-	
+	github.com/bww/go-postgis v1.0.4
+
 
 )
 
