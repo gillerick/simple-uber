@@ -11,6 +11,7 @@ require (
 	github.com/prometheus/common v0.2.0
 	github.com/segmentio/kafka-go v0.4.39
 	gopkg.in/yaml.v2 v2.4.0
+	github.com/gin-gonic/gin v1.4.0
 	gorm.io/driver/postgres v1.3.7
 	gorm.io/gorm v1.24.0
 
