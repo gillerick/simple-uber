@@ -27,7 +27,7 @@ func (s UserService) SaveUser(user models.User) (models.User, error) {
 func (s UserService) FindUserByUserId(userId uint64) (models.User, error) {
 	user, err := s.repository.FindUserById(userId)
 	if err != nil {
-		return models.User{}, fmt.Errorf("account retrieval failed with error: %w", err)
+		return models.User{}, fmt.Errorf("user retrieval failed with error: %w", err)
 	}
 	return user, nil
 }

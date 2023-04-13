@@ -27,7 +27,7 @@ func (s DriverService) SaveDriver(driver models.Driver) (models.Driver, error) {
 func (s DriverService) FindDriverByUserId(driverId uint64) (models.Driver, error) {
 	driver, err := s.repository.FindDriverById(driverId)
 	if err != nil {
-		return models.Driver{}, fmt.Errorf("account retrieval failed with error: %w", err)
+		return models.Driver{}, fmt.Errorf("driver retrieval failed with error: %w", err)
 	}
 	return driver, nil
 }
