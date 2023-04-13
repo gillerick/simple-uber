@@ -10,7 +10,7 @@ import (
 
 type DriverRepository interface {
 	SaveDriver(driver models.Driver) (models.Driver, error)
-	FindDriverById(id uint64) (*models.Driver, error)
+	FindDriverById(id uint64) (models.Driver, error)
 	DeleteDriver(driver models.Driver) error
 }
 
@@ -49,4 +49,8 @@ func (r Repository) DeleteDriver(driver models.Driver) error {
 		return fmt.Errorf("driver could not be deleted %w", err)
 	}
 	return nil
+}
+
+func NewDriverRepository(database *DatabaseHandler) *Repository {
+	return &Repository{db: database}
 }
