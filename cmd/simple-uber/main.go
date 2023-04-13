@@ -1,6 +1,7 @@
 package simple_uber
 
 import (
+	"fmt"
 	"log"
 	"simple-uber/internal/configs"
 	"simple-uber/internal/database"
@@ -36,4 +37,13 @@ func (s *Service) Run() error {
 
 	//Set up database
 	dbHandler := repositories.NewDatabaseHandler(pgDb)
+
+	//Run database migrations
+	err = dbHandler.Migrate()
+	if err != nil {
+		return fmt.Errorf("repositories migrations failed: %w", err)
+	}
+
+	//ToDO: Setup repos, services and controllers
+	return nil
 }
