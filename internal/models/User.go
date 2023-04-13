@@ -1,12 +1,11 @@
 package models
 
 import (
-	uuid "github.com/jackc/pgtype/ext/gofrs-uuid"
 	"time"
 )
 
 type User struct {
-	UserId      uuid.UUID
+	UserId      uint64
 	Name        string
 	Email       string
 	PhoneNumber string

@@ -29,7 +29,7 @@ func (s DriverService) FindDriverByUserId(driverId uint64) (models.Driver, error
 	if err != nil {
 		return models.Driver{}, fmt.Errorf("account retrieval failed with error: %w", err)
 	}
-	return *driver, nil
+	return driver, nil
 }
 
 func (s DriverService) DeleteDriver(driver models.Driver) error {
